@@ -4,21 +4,6 @@ Course: CS178 Build Automation for DevOps and QA
 CRN: 76718
 Date: 9/16/2017
 Assignment: Make Build Count3s.c Application
-
-
-Due date: Thursday, September 14, 2017, 5:00 PM
-Requested files: build.xml (Download)
-Type of work: Individual work
-Write a build.xml file with 2 targets
-
-Count3s - Build the Count3s class from source
-runCount3s - run the count3s application
-There are two source code files required to build the program
-
-CountThrees.java and ReadInt32BitLE.java
-
-The source code is embedded in this virtual programming lab and also available as a .zip file under topic resources
-7mxk4h2
 -->
 <project name="Make Build Count3s" basedir=".">
     <property name="build.dir" value="build"/>
@@ -30,11 +15,11 @@ The source code is embedded in this virtual programming lab and also available a
         <delete dir="${build}"/>
     </target>
     <target name="init" description="setup directories">
-        <mkdir "${classes.dir}">
-        <mkdir dir="${jar.dir}">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${jar.dir}"/>
     </target>
     <target name="Count3s" depends="init">
-        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
     </target>
     <target name="jar">
         <jar destfile="${jar.dir}/Count3s.jar" basedir="${classes.dir}">
